@@ -8,8 +8,8 @@ from datetime import datetime
 load_dotenv()
 API_KEY = os.getenv('GREYNOISE_API_KEY')
 MONGO_URI = os.getenv('MONGODB_URI', 'mongodb://localhost:27017')
-DB_NAME = "Greynoise"
-COLLECTION_NAME = "IP_Data"
+DB_NAME =os.getenv('DB_NAME', 'Greynoise')
+COLLECTION_NAME = os.getenv('COLLECTION_NAME', 'IP_DATA')
 
 # MongoDB
 client = pymongo.MongoClient(MONGO_URI)
